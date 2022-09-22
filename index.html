@@ -12,10 +12,7 @@
 
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <script src="tailwind.config.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css"> -->
-    <!-- <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script> -->
+
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -57,9 +54,14 @@
                         <div>
                             <!-- Website Logo -->
                             <a href="#" class="flex items-center py-4 px-2">
-                                <img src="assets/images/logo.png" alt="Logo" class="h-8 w-8 mr-2">
-                                <span class="font-semibold text-gray-500 text-lg dark:text-gray-200">DOrSU</span>
+                                <img src="assets/images/logo.png" alt="Logo" class="h-8 w-8 mr-2 hidden lg:block md:block ">
+                                <img src="assets/images/school_name.png" alt="Logo" class="h-20 w-full mr-2 md:hidden ">
+
+
+                                <span class="font-semibold text-gray-500 text-lg dark:text-gray-200 hidden lg:block md:block">DOrSU</span>
+                                <!-- <span class="font-semibold text-gray-500 text-lg dark:text-gray-200 hidden sm:block">Davao Oriental State University</span> -->
                             </a>
+
                         </div>
                         <!-- Primary Navbar items -->
                         <div class="hidden md:flex items-center space-x-1">
@@ -228,38 +230,14 @@
                         <!-- <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Search</a> -->
 
                         <!-- darkmode switcher -->
-                        <button id="theme-toggle" type="button" class="text-black-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                            <svg
-                              id="theme-toggle-dark-icon"
-                              class="w-5 h-5 hidden"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                              ></path>
-                            </svg>
-                            <svg
-                              id="theme-toggle-light-icon"
-                              class="w-5 h-5 hidden "
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                              ></path>
-                            </svg>
-                          </button>
+
                     </div>
                     <!-- Mobile menu button -->
                     <div class="md:hidden flex items-center">
+
                         <button class="outline-none mobile-menu-button">
                                 <svg
-                                    class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                                    class=" w-6 h-6 text-gray-500 hover:text-orange-500 "
                                     x-show="!showMenu"
                                     fill="none"
                                     stroke-linecap="round"
@@ -271,23 +249,37 @@
                                     <path d="M4 6h16M4 12h16M4 18h16"></path>
                                 </svg>
                             </button>
+
                     </div>
                 </div>
             </div>
+
             <!-- mobile menu -->
-            <div class="hidden mobile-menu">
-                <ul class="">
+            <div class="hidden mobile-menu ">
+                <ul class="md:hidden">
                     <li class="active">
-                        <a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a>
+                        <a href="#" class="block text-sm px-2 py-4 text-white bg-orange-500 font-semibold dark:text-slate-200">Home</a>
                     </li>
                     <li>
-                        <a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a>
+                        <a href="#" class="block text-sm px-2 py-4 hover:bg-orange-500 transition duration-300 dark:text-slate-200">About</a>
                     </li>
                     <li>
-                        <a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a>
+                        <a href="#" class="block text-sm px-2 py-4 hover:bg-orange-500 transition duration-300 dark:text-slate-200">Academics</a>
                     </li>
                     <li>
-                        <a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a>
+                        <a href="#" class="block text-sm px-2 py-4 hover:bg-orange-500 transition duration-300 dark:text-slate-200">Research</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-sm px-2 py-4 hover:bg-orange-500 transition duration-300 dark:text-slate-200">Students</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-sm px-2 py-4 hover:bg-orange-500 transition duration-300 dark:text-slate-200">Resource</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-sm px-2 py-4 hover:bg-orange-500 transition duration-300 dark:text-slate-200">Admissions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-sm px-2 py-4 hover:bg-orange-500 transition duration-300 dark:text-slate-200">Grade Inquiry</a>
                     </li>
                 </ul>
             </div>
@@ -306,7 +298,7 @@
         <div class="flex justify-between">
             <div class="relative">
                 <img src="assets/images/background_main1.jpg" alt="" srcset="" class="w-screen rounded-b-md">
-                <img src="assets/images/school_name.png" alt="Logo" class="h-40 w-90 mr-2 absolute  bottom-0 left-60 mt-50 ml-20">
+                <img src="assets/images/school_name.png" alt="Logo" class="h-40 w-90 mr-2 absolute hidden lg:block md:block bottom-0 left-2/5 mt-50 ml-20">
             </div>
         </div>
     </div>
@@ -556,7 +548,36 @@
         </div>
     </section>
     <footer class="text-gray-600 body-font">
+        <!-- for dark mode toggler  -->
         <div class="gird-cols-12 p-4 fixed bottom-0 right-0">
+            <button id="theme-toggle" type="button" class="inline-block mb-4 text-black-500 bg-gray-100 dark:text-gray-800 hover:bg-gray-200 dark:hover:text-gray-200 dark:hover:bg-gray-700 focus:outline-none   dark:focus:ring-gray-700 rounded-full text-sm p-2.5">
+                <svg
+                  id="theme-toggle-dark-icon"
+                  class="w-5 h-5 hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+                <svg
+                  id="theme-toggle-light-icon"
+                  class="w-5 h-5 hidden "
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            <!-- for back to top button  -->
+
             <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class=" inline-block p-3 bg-orange-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5 sticky"
                 id="btn-back-to-top">
                 <svg
@@ -695,6 +716,7 @@
     }
 
     var themeToggleBtn = document.getElementById('theme-toggle');
+
 
     themeToggleBtn.addEventListener('click', function() {
 
